@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content container-fluid">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="page-title">Inbox</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Inbox</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="compose-btn">
+                            <a href="{% url 'inbox_check' %}" class="btn btn-primary btn-block">
+                                Compose
+                            </a>
+                        </div>
+                        <ul class="inbox-menu">
+                            <li class="active">
+                                <a href="#"><i class="fas fa-download"></i> Inbox <span
+                                        class="mail-count">(5)</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'inbox_imp' %}"><i class="far fa-star"></i> Important</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'sent_mail' %}"><i class="far fa-paper-plane"></i> Sent Mail</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'drafts' %}"><i class="far fa-file-alt"></i> Drafts <span
+                                        class="mail-count">(13)</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'trash' %}"><i class="far fa-trash-alt"></i> Trash</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+{% endblock %}
